@@ -78,6 +78,7 @@ header {
     cursor: pointer;
 }
 
+
 .carousel-scroll {
     display: flex;
     overflow-x: auto;
@@ -85,15 +86,17 @@ header {
     gap: 10px;
     padding-bottom: 10px;
     scrollbar-width: none;
-    /* Firefox */
 }
 
 .carousel-scroll::-webkit-scrollbar {
     display: none;
-    /* Chrome, Safari */
 }
 
 .poster {
+    width: 30vw;
+    min-width: 180px;
+    max-width: 250px;
+    height: auto;
     flex: 0 0 auto;
     scroll-snap-align: start;
     width: 250px;
@@ -106,3 +109,14 @@ header {
 .poster:hover {
     transform: scale(1.1); }
 
+@media (max-width: 768px) {
+            .poster {
+                width: 45vw;
+            }
+        }
+    
+@media (max-width: 480px) {
+            .poster {
+                width: 90vw;
+            }
+        }
